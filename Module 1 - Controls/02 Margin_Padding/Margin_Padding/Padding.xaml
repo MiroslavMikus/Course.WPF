@@ -5,11 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Margin_Padding.Done"
       mc:Ignorable="d" 
-      Title="Padding 40, 10, 0, 20"
-      SizeToContent="WidthAndHeight">
+      Title="Padding 40, 10, 0, 20" Height="163.261" Width="312.565">
     <Grid>
-        <Button Padding="40, 10, 0, 20" FontSize="16" Margin="10">
-            Button 1
-        </Button>
+        <Canvas>
+            <Button Canvas.Left="50" Canvas.Top="50" 
+          Padding="40, 10, 0, 20" FontSize="16">
+                Button
+            </Button>
+        </Canvas>
     </Grid>
 </Window>
