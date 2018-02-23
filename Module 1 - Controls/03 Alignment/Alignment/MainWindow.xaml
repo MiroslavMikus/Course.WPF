@@ -12,6 +12,7 @@
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -21,11 +22,13 @@
         <Button Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left">Horizontal - Left</Button>
         <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right">Horizontal - Right</Button>
         <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Horizontal - Center</Button>
-        <Button Grid.Row="3" Grid.Column="0" >Horizontal - None</Button>
+        <Button Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" >Horizontal - Stretch</Button>
+        <Button Grid.Row="4" Grid.Column="0" >Horizontal - Default</Button>
 
         <Button Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">Vertical - Top</Button>
         <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom">Vertical - Bottom</Button>
         <Button Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">Vertical - Center</Button>
-        <Button Grid.Column="1" Grid.Row="3">Vertical - None</Button>
+        <Button Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch">Vertical - Stretch</Button>
+        <Button Grid.Column="1" Grid.Row="4">Vertical - Default</Button>
     </Grid>
 </Window>
