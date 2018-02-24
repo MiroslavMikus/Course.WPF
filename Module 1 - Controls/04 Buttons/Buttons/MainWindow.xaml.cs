@@ -34,5 +34,25 @@ namespace Buttons
         {
             lblNumber.Content = Convert.ToInt32(lblNumber.Content.ToString()) - 1;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Button - click event");
+        }
+
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ToggleButton - click event");
+        }
+
+        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ToggleButton - Checked event, State: Checked");
+        }
+
+        private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ToggleButton - Unchecked event, State: Unchecked");
+        }
     }
 }

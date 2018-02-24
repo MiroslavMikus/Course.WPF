@@ -1,0 +1,57 @@
+﻿<Window x:Class="Input_Controls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Input_Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="750">
+    <Grid Margin="10" ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Label FontSize="20" Content="Im a Label" Grid.Row="0"/>
+
+        <PasswordBox PasswordChar="@" FontSize="20" Grid.Row="1" Margin="5"></PasswordBox>
+
+        <TextBox SpellCheck.IsEnabled="True" 
+                 VerticalScrollBarVisibility="Auto"
+                 TextWrapping="WrapWithOverflow"
+                 AcceptsReturn="True"
+                 AcceptsTab="True"
+                 FontSize="20" Margin="5" Grid.Row="2">Im a TextBox</TextBox>
+
+        <TextBlock Margin="10" FontSize="20" Grid.Row="3" 
+                   TextWrapping="Wrap" 
+                   IsHyphenationEnabled="True">
+                Here is <Bold>very</Bold> long <Italic>Text</Italic> 
+                in a <Underline> TextBlock-Element</Underline>.
+                <LineBreak/>
+                <LineBreak/>
+                <Bold><Underline>Different</Underline></Bold> sections can have a different layout settings.
+                <LineBreak/>
+                You can change the <Span FontFamily="Courier New">
+                Font</Span>, the <Span Foreground="Red" FontWeight="Bold"> 
+                Font color</Span> or <Span Background="Red">background.</Span>
+        </TextBlock>
+
+        <StackPanel Grid.Row="4" Margin="10">
+            <TextBlock FontSize="20"
+                       TextWrapping="NoWrap" 
+                       TextTrimming="CharacterEllipsis">
+                The quick brown fox jumps over the lazy dog - TextTrimming= CharacterEllipsis
+            </TextBlock>
+
+            <TextBlock FontSize="20" 
+                       TextWrapping="NoWrap" 
+                       TextTrimming="WordEllipsis">
+                The quick brown fox jumps over the lazy dog - TextTrimming= WordEllipsis
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

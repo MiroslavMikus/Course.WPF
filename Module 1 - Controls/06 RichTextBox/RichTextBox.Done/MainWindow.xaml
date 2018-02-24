@@ -1,0 +1,20 @@
+﻿<Window x:Class="RichTextBox.Done.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RichTextBox"
+        mc:Ignorable="d"
+        Title="RichTextBox.Done" Height="350" Width="525">
+    <DockPanel>
+        <StackPanel Margin="5" Orientation="Vertical" Width="100" DockPanel.Dock="Right">
+            <Button Height="30" Click="btnUltraBold_Click">UltraBold</Button>
+            <Button Height="30" Click="btnBold_Click">Bold</Button>
+            <Button Height="30" Click="btnNormal_Click">Normal</Button>
+            <Button Height="30" Click="btnLight_Click">Light</Button>
+            <Button Height="30" Click="btnUltraLight_Click">UltraLight</Button>
+        </StackPanel>
+        <RichTextBox Name="RichDocument" Margin="5" 
+               Background="LightGray" FontSize="18"></RichTextBox>
+    </DockPanel>
+</Window>

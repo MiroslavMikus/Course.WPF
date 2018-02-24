@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Buttons"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -17,16 +17,31 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="0" Grid.Row="0" Margin="10">Button</Button>
-        <ToggleButton Grid.Column="0" Grid.Row="1" Margin="10">ToggleButton</ToggleButton>
+        <!--Button-->
+        <Button Grid.Column="0" Grid.Row="0" Margin="10" 
+                Click="Button_Click">Button</Button>
+        
+        <!--ToggleButton-->
+        <ToggleButton Grid.Column="0" Grid.Row="1" Margin="10"
+                      Click="ToggleButton_Click"
+                      Checked="ToggleButton_Checked"
+                      Unchecked="ToggleButton_Unchecked">
+            ToggleButton
+        </ToggleButton>
 
+        <!--RadioButton-->
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0" Margin="10">
-            <RadioButton GroupName="Group1" Margin="2">RadioButton 1</RadioButton>
-            <RadioButton GroupName="Group1" Margin="2">RadioButton 2</RadioButton>
-            <RadioButton GroupName="Group1" Margin="2">RadioButton 3</RadioButton>
+            <RadioButton GroupName="Group1" Margin="2">RadioButton 1 - Group 1</RadioButton>
+            <RadioButton GroupName="Group1" Margin="2 2 2 7">RadioButton 2 - Group 1</RadioButton>
+            <RadioButton GroupName="Group2" Margin="2">RadioButton 1 - Group 2</RadioButton>
+            <RadioButton GroupName="Group2" Margin="2">RadioButton 2 - Group 2</RadioButton>
         </StackPanel>
 
-        <CheckBox Grid.Column="1" Grid.Row="1" Margin="10">Check box</CheckBox>
+        <!--CheckBox-->
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" >
+            <CheckBox IsThreeState="False" Margin="2">Check box - Two state</CheckBox>
+            <CheckBox IsThreeState="True" Margin="2">Check box - Three state</CheckBox>
+        </StackPanel>
 
         <!--Repeat button-->
         <StackPanel Margin="10" Grid.Row="2" Grid.Column="0">
