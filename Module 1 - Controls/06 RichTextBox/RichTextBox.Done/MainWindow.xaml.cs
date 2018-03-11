@@ -25,7 +25,8 @@ namespace RichTextBox.Done
             InitializeComponent();
         }
 
-        private void btnUltraBold_Click(object sender, RoutedEventArgs e)
+        #region Formatting
+        private void  UltraBold_Click(object sender, RoutedEventArgs e)
         {
             FontWeight actFontWeight = GetWeight();
 
@@ -35,7 +36,7 @@ namespace RichTextBox.Done
             ApplyWeight(newFontWeight);
         }
 
-        private void btnBold_Click(object sender, RoutedEventArgs e)
+        private void  Bold_Click(object sender, RoutedEventArgs e)
         {
             FontWeight actFontWeight = GetWeight();
 
@@ -45,12 +46,12 @@ namespace RichTextBox.Done
             ApplyWeight(newFontWeight);
         }
 
-        private void btnNormal_Click(object sender, RoutedEventArgs e)
+        private void  Normal_Click(object sender, RoutedEventArgs e)
         {
             ApplyWeight(FontWeights.Normal);
         }
 
-        private void btnLight_Click(object sender, RoutedEventArgs e)
+        private void  Light_Click(object sender, RoutedEventArgs e)
         {
             FontWeight actFontWeight = GetWeight();
 
@@ -60,7 +61,7 @@ namespace RichTextBox.Done
             ApplyWeight(newFontWeight);
         }
 
-        private void btnUltraLight_Click(object sender, RoutedEventArgs e)
+        private void  UltraLight_Click(object sender, RoutedEventArgs e)
         {
             FontWeight actFontWeight = GetWeight();
 
@@ -69,7 +70,9 @@ namespace RichTextBox.Done
 
             ApplyWeight(newFontWeight);
         }
+        #endregion
 
+        #region Tools
         private FontWeight GetWeight()
         {
             Object currentFontWeight = RichDocument.Selection.GetPropertyValue(FontWeightProperty);
@@ -80,7 +83,7 @@ namespace RichTextBox.Done
             }
             catch (InvalidCastException)
             {
-                // This ocurrs if you pass in text with different formattings.
+                // This ocurrs if you pass in text with multiple formats.
                 return FontWeights.Normal;
             }
         }
@@ -91,5 +94,18 @@ namespace RichTextBox.Done
 
             RichDocument.Focus();
         }
+        #endregion
+
+        #region Save & Load
+        private void  Save_Click(object sender, RoutedEventArgs e)
+        {
+            FileStorage.StoreToFile(RichDocument.Document);
+        }
+
+        private void  Load_Click(object sender, RoutedEventArgs e)
+        {
+            FileStorage.RestoreFromFile(RichDocument.Document);
+        }
+        #endregion
     }
 }

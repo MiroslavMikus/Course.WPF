@@ -7,14 +7,32 @@
         mc:Ignorable="d"
         Title="RichTextBox.Done" Height="350" Width="525">
     <DockPanel>
-        <StackPanel Margin="5" Orientation="Vertical" Width="100" DockPanel.Dock="Right">
-            <Button Height="30" Click="btnUltraBold_Click">UltraBold</Button>
-            <Button Height="30" Click="btnBold_Click">Bold</Button>
-            <Button Height="30" Click="btnNormal_Click">Normal</Button>
-            <Button Height="30" Click="btnLight_Click">Light</Button>
-            <Button Height="30" Click="btnUltraLight_Click">UltraLight</Button>
-        </StackPanel>
-        <RichTextBox Name="RichDocument" Margin="5" 
-               Background="LightGray" FontSize="18"></RichTextBox>
+        <Grid Margin="5" Width="100" DockPanel.Dock="Right">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <StackPanel Orientation="Vertical">
+                <Button Click="UltraBold_Click">UltraBold</Button>
+                <Button Click="Bold_Click">Bold</Button>
+                <Button Click="Normal_Click">Normal</Button>
+                <Button Click="Light_Click">Light</Button>
+                <Button Click="UltraLight_Click">UltraLight</Button>
+            </StackPanel>
+            
+            <StackPanel VerticalAlignment="Bottom" Grid.Row="1">
+                <Button Click="Save_Click">Save</Button>
+                <Button Click="Load_Click">Load</Button>
+            </StackPanel>
+        </Grid>
+        
+        <RichTextBox Name="RichDocument"
+                     Margin="5"
+                     Background="LightGray"
+                     FontSize="18"
+                     DockPanel.Dock="Left"/>
+        
     </DockPanel>
 </Window>

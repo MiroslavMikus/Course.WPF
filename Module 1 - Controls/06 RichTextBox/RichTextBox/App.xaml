@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:RichTextBox"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="30"/>
+        </Style>
     </Application.Resources>
 </Application>
